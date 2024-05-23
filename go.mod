@@ -1,4 +1,4 @@
-module github.com/arontsang/certmagic
+module github.com/caddyserver/certmagic
 
 go 1.21.0
 
