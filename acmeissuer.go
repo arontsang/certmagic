@@ -275,7 +275,7 @@ func NewACMEIssuer(cfg *Config, template ACMEIssuer) *ACMEIssuer {
 			RootCAs: template.TrustedRoots,
 		}
 	}
-	jar, _ := cookiejar.New(&cookiejar.Options{PublicSuffixList: publicsuffix.List}) // lol it never returns an error (as of May 2024)
+	jar, _ := cookiejar.New() // lol it never returns an error (as of May 2024)
 	template.httpClient = &http.Client{
 		Transport: transport,
 		Timeout:   HTTPTimeout,
